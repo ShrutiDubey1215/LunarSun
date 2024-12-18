@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-Part Screen</title>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(00, 00, 000);
+        display: grid;
+        place-items: center;
+    }
+    .universe {
+        width: 30vw;
+        aspect-ratio: 1;
+        background-color: #ffbb5c;
+        display: grid;
+        place-items: center;
+        animation: sky 10s infinite ease-in-out;
+    }
+    .universe1 {
+        width: 30vw;
+        aspect-ratio: 1;
+        background-color: #ffbb5c;
+        display: grid;
+        place-items: center;
+        animation: sky1 10s infinite ease-in-out;
+    }
+    .universe2 {
+        width: 30vw;
+        aspect-ratio: 1;
+        background-color: #ffbb5c;
+        display: grid;
+        place-items: center;
+        animation: sky2 10s infinite ease-in-out;
+    }
+    .container {
+        display: flex;
+        height: 100vh; /* Full screen height */
+    }
+    .section {
+        flex: 1; /* Each section takes up equal space */
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    @keyframes sky {
+        0% {
+            background-color: #ffbb5cb5;
+
+        }
+        25% {
+            background-color: #fcbf49;
+        }
+
+        50% {
+            background-color: #000000;
+        }
+
+        75% {
+            background-color: #fcbf49;
+        }
+
+        100% {
+            background-color: #ffbb5cb5;
+        }
+    }
+    @keyframes sky1 {
+        0% {
+            background-color: #ffbb5cb5;
+
+        }
+        25% {
+            background-color: #fcbf49;
+        }
+
+        50% {
+            background-color: #000000;
+        }
+
+        75% {
+            background-color: #fcbf49;
+        }
+
+        100% {
+            background-color: #ffbb5cb5;
+        }
+    }
+    @keyframes sky2 {
+        0% {
+            background-color: #ffbb5cb5;
+
+        }
+        25% {
+            background-color: #fcbf49;
+        }
+
+        50% {
+            background-color: #000000;
+        }
+
+        75% {
+            background-color: #fcbf49;
+        }
+
+        100% {
+            background-color: #ffbb5cb5;
+        }
+    }
+    .sun {
+        width: 14vw;
+        aspect-ratio: 1;
+        background-color: #e25e3e;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            width: inherit;
+            aspect-ratio: 1;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            animation: moon 10s infinite ease-in-out;
+        }
+    }
+    .sun1 {
+        width: 14vw;
+        aspect-ratio: 1;
+        background-color: #e25e3e;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            width: inherit;
+            aspect-ratio: 1;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            animation: moon1 10s infinite ease-in-out;
+        }
+    }
+    .sun2 {
+        width: 14vw;
+        aspect-ratio: 1;
+        background-color: #e25e3e;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            width: inherit;
+            aspect-ratio: 1;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            animation: moon2 10s infinite ease-in-out;
+        }
+    }
+    @keyframes moon {
+        0% {
+            translate: 100%;
+            scale: 1;
+        }
+        50% {
+            translate: 0%;
+            scale: 0.9;
+        }
+        100% {
+            translate: -100%;
+            scale: 0.9;
+        }
+    }
+    @keyframes moon1 {
+        0% {
+            translate: 100%;
+            scale: 1;
+        }
+        50% {
+            translate: 0%;
+            scale: 0.9;
+        }
+        100% {
+            translate: 500%;
+            scale: 0.9;
+        }
+    }
+    @keyframes moon2 {
+        0% {
+            translate: 100%;
+            scale: 200;
+        }
+        50% {
+            translate: 0%;
+            scale: 0.9;
+        }
+        100% {
+            translate: 100%;
+            scale: 0.9;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="section left">Left Section
+            <div class="universe">
+                <div class="sun"></div>
+            </div>
+        </div>
+        <div class="section center">Center Section
+            <div class="universe1">
+                <div class="sun1"></div>
+            </div>
+        </div>
+        <div class="section right">Right Section
+            <div class="universe2">
+                <div class="sun2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
